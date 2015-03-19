@@ -26,7 +26,7 @@ case "$1" in
         else
             echo "Starting Droopy Server..."
             cd /home/$USERNAME
-            su - $USERNAME bash -c "cd /home/daniel/ && screen -h $HISTORY -dmS droopy $INVOCATION"
+            su - $USERNAME bash -c "cd /home/$USERNAME/ && screen -h $HISTORY -dmS droopy $INVOCATION"
             sleep 7
             if pgrep -u $USERNAME -f droopy > /dev/null
             then
