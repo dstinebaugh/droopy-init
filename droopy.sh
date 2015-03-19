@@ -13,10 +13,9 @@ case "$1" in
   start)
         echo "Running Droopy init"
         #!/bin/bash
-        #Startup script for services on my cloud
 
         #Settings
-        USERNAME='daniel'
+        USERNAME='<username>'
         INVOCATION="python /usr/local/bin/droopy/droopy.py"
         HISTORY=1024
         SERVICE='droopy.py'
@@ -26,7 +25,7 @@ case "$1" in
             echo "Droopy is already running!"
         else
             echo "Starting Droopy Server..."
-            cd /home/daniel
+            cd /home/$USERNAME
             su - $USERNAME bash -c "cd /home/daniel/ && screen -h $HISTORY -dmS droopy $INVOCATION"
             sleep 7
             if pgrep -u $USERNAME -f droopy > /dev/null
@@ -45,7 +44,7 @@ case "$1" in
     #!/bin/bash
 
     #Settings
-    USERNAME='daniel'
+    USERNAME='<username>'
     su - $USERNAME -c "screen -S droopy -p 0 -X quit"
 
     ;;
