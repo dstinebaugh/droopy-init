@@ -43,7 +43,7 @@ case "$1" in
   stop)
     echo "Stopping droopy"
     #!/bin/bash
-    
+
     #Settings
     USERNAME='daniel'
     su - $USERNAME -c "screen -S droopy -p 0 -X quit"
