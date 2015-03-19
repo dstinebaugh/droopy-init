@@ -6,6 +6,7 @@
 # Default-Stop:      0 1 6
 # Short-Description: droopy
 # Description:       Starts the droopy python webserver in a screen session named droopy
+# Author:            Daniel Stinebaugh
 ### END INIT INFO
 
 # Carry out specific functions when asked to by the system
